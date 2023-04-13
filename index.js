@@ -11,24 +11,7 @@ const express = require('express')
  
   require('./config/auth')(passport)   
   const {isAuth}= require('./helpers/isAuth')   
-    
-  const cadastros = require('./routes/cadastros')
-  const listagens = require('./routes/listagens') 
-  const posts = require('./routes/posts')
-  const updates = require('./routes/updates')
-  const dels = require('./routes/dels')
-  const edits = require('./routes/edits')
-  const querys = require('./routes/querys')
-  const usuarios = require('./routes/usuarios')  
- */
 
-  const index = require('./routes/index')  
-  const table = require('./routes/table')  
- 
-  app.use('/',index)
-  app.use('/table',table) 
-  
- /*
   app.use(session({
   secret: '',
   resave: true,
@@ -58,6 +41,12 @@ const express = require('express')
   }))    
   app.set('view engine','handlebars')  
   app.use(express.static(path.join(__dirname,'public')))
+
+  const index = require('./routes/index')  
+  const table = require('./routes/table')  
+  app.use('/',index)
+  app.use('/table',table) 
+  
   
   /*
   app.use('/admin',admin) 
