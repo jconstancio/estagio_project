@@ -42,9 +42,9 @@ const express = require('express')
   app.set('view engine','handlebars')  
   app.use(express.static(path.join(__dirname,'public')))
 
-  const index = require('./routes/index')  
+  const main = require('./routes/main')  
   const table = require('./routes/table')  
-  app.use('/',index)
+  app.use('/',main)
   app.use('/table',table) 
   
   
@@ -62,7 +62,8 @@ const express = require('express')
   
  
   
-  //app.listen(8081)
+  
+  app.listen(8081)
  //app.listen(process.env.PORT || 5000)
 
-  app.listen(5000); 
+  //app.listen(5000); 
