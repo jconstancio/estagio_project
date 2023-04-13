@@ -1,0 +1,91 @@
+<div id="report">
+    <div class="d-flex justify-content-between bg-light">
+        <img src="/images/logomarca.png"  width="250">
+        <h5 class="text-center pt-3">Rastreamento de Veículos de Coleta</h5> 
+        <a href="/" class="text-center pt-3">Voltar ao Início</a>.
+    </div> 
+    
+    <h6 class="text-center p-2 m-2">Bem vindo(a), <b>Empresa Cliente Ltda</b> </h6> 
+   
+        
+    <div class="d-flex justify-content-left">
+        <div class="col-6 d-flex justify-content-between bg-light rounded shadow-lg border border-secondary m-1">
+            <div class="form-group m-1">           
+                <label for="inicial" class="form-label">Data inicial</label>
+                <input type="date" class="form-control" id="inicial" name="inicial" required>
+            
+            </div>
+            <div class="form-group  m-1">            
+                <label for="final">Data final</label>
+                <input type="date" class="form-control" id="final" name="final" required>
+                
+            </div>
+            <div class="form-group  m-1">            
+                <label for="ticket">Ticket</label>
+                <input type="text" class="form-control" name="ticket" id="ticket">
+                
+            </div>
+            <div class="form-group mx-2 pt-2">
+                <button type="button" class="btn text-white mt-4" id="btn_search" style="background-color:#16A085" data-bs-toggle="modal" data-bs-target="#table-modal"><b>Pesquisar</b></button>        
+            </div> 
+        </div>
+        <div class="col d-flex justify-content-left bg-light rounded shadow-lg border border-secondary m-1">     
+            <div class="form-group">  
+                <label for="cdrlist">Lista de CDR</label>         
+                <select class="form-control" id="cdrlist" name="cdrlist">
+                    <option selected>==ver lista==</option>
+                    <option value="">Todas</option>
+                    <option value="200">200/2023 (10/01/2023)</option>
+                    <option value="201">201/2023 (10/01/2023)</option>
+                    <option value="202">202/2023 (11/01/2023)</option>
+                    <option value="203">203/2023 (12/01/2023)</option>
+                    <option value="204">204/2023 (13/01/2023)</option>
+                    <option value="205">205/2023 (15/01/2023)</option>
+                </select>
+            </div> 
+            <div class="form-group mx-2 pt-2">
+                <button type="button" class="btn text-whitemt-4" style="background-color:#16A085" id="btn_search" data-bs-toggle="modal" data-bs-target="#table-modal"><b>Gerar CDR</b></button>        
+            </div>                    
+        </div>
+    </div>  
+     <div class="col d-flex justify-content-left shadow-lg border border-secondary m-1 p-0"> 
+        <table class="table table-sm m-0 p-0 table-striped">
+            <thead>
+                <tr class="text-white" style="background-color:#16A085">
+                    <th scope="col">#</th>
+                    <th scope="col">Ticket</th>
+                    <th scope="col">Data/Hora</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Resíduo</th>
+                    <th scope="col">Nome do Gerador</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>12345</td>
+                    <td>01/03/2023 13:00:00</td>
+                    <td>7.1</td>
+                    <td>AA / BB /CC</td>
+                    <td>UBS RIO ACIMA</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>12345</td>
+                    <td>04/03/2023 09:15:00</td>
+                    <td>15.0</td>
+                    <td>AA / BB /CC</td>
+                    <td>UBS CENTRAL</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>12345</td>
+                    <td>04/04/2023 18:00:00</td>
+                    <td>1.01</td>
+                    <td>GG / RR /CC</td>
+                    <td>UBS SANTA GERTRUDES</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+</div>

@@ -1,0 +1,175 @@
+      
+<div id="table">
+    <div class="d-flex justify-content-between bg-light">
+        <img src="/images/logomarca.png"  width="250">
+        <h5 class="text-center pt-3">Rastreamento de Veículos de Coleta</h5> 
+        <a href="/" class="text-center pt-3">Voltar ao Início</a>.
+    </div> 
+    
+    <h6 class="text-center p-2 m-2">Bem vindo(a), <b>Empresa Cliente Ltda</b> </h6> 
+   
+        
+    <div class="d-flex justify-content-left">
+        <div class="col-6 d-flex justify-content-between bg-light rounded shadow-lg border border-secondary m-1">
+            <div class="form-group m-1">           
+                <label for="inicial" class="form-label">Data inicial</label>
+                <input type="date" class="form-control" id="inicial" name="inicial" required>
+            
+            </div>
+            <div class="form-group  m-1">            
+                <label for="final">Data final</label>
+                <input type="date" class="form-control" id="final" name="final" required>
+                
+            </div>
+            <div class="form-group  m-1">            
+                <label for="ticket">Ticket</label>
+                <input type="text" class="form-control" name="ticket" id="ticket">
+                
+            </div>
+            <div class="form-group mx-2 pt-2">
+                <button type="button" class="btn text-white mt-4" id="btn_search" style="background-color:#16A085" data-toggle="modal" data-target="#table-modal"><b>Pesquisar</b></button>        
+            </div> 
+        </div>
+        <div class="col d-flex justify-content-left bg-light rounded shadow-lg border border-secondary m-1">     
+            <div class="form-group">  
+                <label for="cdrlist">Lista de CDR</label>         
+                <select class="form-control" id="cdrlist" name="cdrlist">
+                    <option selected>==ver lista==</option>
+                    <option value="">Todas</option>
+                    <option value="200">200/2023 (10/01/2023)</option>
+                    <option value="201">201/2023 (10/01/2023)</option>
+                    <option value="202">202/2023 (11/01/2023)</option>
+                    <option value="203">203/2023 (12/01/2023)</option>
+                    <option value="204">204/2023 (13/01/2023)</option>
+                    <option value="205">205/2023 (15/01/2023)</option>
+                </select>
+            </div> 
+            <div class="form-group mx-2 pt-2">
+                <button type="button" class="btn text-white mt-4" style="background-color:#16A085" id="btn_search" data-toggle="modal" data-target="#cdr-modal"><b>Gerar CDR</b></button>        
+            </div>                    
+        </div>
+    </div>  
+    <div class="col d-flex justify-content-left shadow-lg border border-secondary m-1 p-0"> 
+        <table class="table table-sm m-0 p-0 table-striped">
+            <thead>
+                <tr class="text-white" style="background-color:#16A085">
+                    <th scope="col">#</th>
+                    <th scope="col">Ticket</th>
+                    <th scope="col">Data/Hora</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Resíduo</th>
+                    <th scope="col">Nome do Gerador</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>12345</td>
+                    <td>01/03/2023 13:00:00</td>
+                    <td>7.1</td>
+                    <td>AA / BB /CC</td>
+                    <td>UBS RIO ACIMA</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>12345</td>
+                    <td>04/03/2023 09:15:00</td>
+                    <td>15.0</td>
+                    <td>AA / BB /CC</td>
+                    <td>UBS CENTRAL</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>12345</td>
+                    <td>04/04/2023 18:00:00</td>
+                    <td>1.01</td>
+                    <td>GG / RR /CC</td>
+                    <td>UBS SANTA GERTRUDES</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+</div>
+<div class="modal fade" id="cdr-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog bg-white text-center">
+        <div class="modal-content" id="cdr-content" style="width:900px; text-align:center; margin:5px; border: solid 1px" role="document" >
+            
+            <div class="d-flex justify-content-between bg-light">
+                <img src="/images/logomarca.png"  width="250">
+                <p class="m-2 p-1"><b>CDR Nº 122/2023</b></p> 
+            </div>
+            <div class="text-left m-2 p-2">
+                <div class="container m-2"> 
+                    <p style=" line-height: 70%"><b>A. EMPRESA CERTIFICADORA.</b></p> 
+                    <p style=" line-height: 40%">NOME DA EMPRESA CERTIFICADORA</p> 
+                    <p style=" line-height: 40%">CNPJ: 99.999.999/9999-99</p> 
+                    <p style=" line-height: 40%">Localizada à Rua da Empresa Certificadora, 999 - BAIRRO DA EMPRESA - CIDADE/SP</p> 
+                    <p style=" line-height: 40%">Licensa de Operação (LO) nº 9999999 Validade 01/01/1900</p>   
+                </div> 
+                <hr>
+                <div class="container m-2"> 
+                    <p style=" line-height: 70%"><b>B. EMPRESA CERTIFICADA.</b></p> 
+                    <p style=" line-height: 40%">NOME DA EMPRESA CERTIFICADA</p> 
+                    <p style=" line-height: 40%">CNPJ: 99.999.999/9999-99</p> 
+                    <p style=" line-height: 40%">Localizada à Rua da Empresa Certificadora, 999 - BAIRRO DA EMPRESA</p> 
+                    <p style=" line-height: 40%">Município : CIDADE/SP</p> 
+                </div>
+                 <hr>  
+            </div>      
+            <br>
+            <h5 class="text-center pt-3">CDR - CERTIFICADO DE DESTINAÇÃO DE RESÍDUO</h5> 
+            <div class="modal-body">
+                <div class="col d-flex justify-content-left shadow-lg border border-secondary m-1 p-0"> 
+                    <table class="table table-sm m-0 p-0 table-striped">
+                        <thead>
+                            <tr class="text-white" style="background-color:#16A085">
+                                <th scope="col">#</th>
+                                <th scope="col">TICKET</th>
+                                <th scope="col">DATA/HORA</th>
+                                <th scope="col">PESO</th>
+                                <th scope="col">UN</th>
+                                <th scope="col">RESÍDUO</th>
+                                <th scope="col">NOME DO GERADOR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>12345</td>
+                                <td>01/03/2023 13:00:00</td>
+                                <td>7.1</td>
+                                <td>KG</td>
+                                <td>AA / BB /CC</td>
+                                <td>UBS RIO ACIMA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>12345</td>
+                                <td>04/03/2023 09:15:00</td>
+                                <td>15.0</td>
+                                <td>KG</td>
+                                <td>AA / BB /CC</td>
+                                <td>UBS CENTRAL</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>12345</td>
+                                <td>04/04/2023 18:00:00</td>
+                                <td>1.01</td>
+                                <td>KG</td>
+                                <td>GG / RR /CC</td>
+                                <td>UBS SANTA GERTRUDES</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-success m-1" id="download" name="download">Baixar</button>
+                <button type="button" class="btn btn-secondary m-1" data-dismiss="modal">Fechar</button>
+            </div> 
+        </div>
+               
+    </div>
+</div>
